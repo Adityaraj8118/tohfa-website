@@ -368,7 +368,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <div>
           <h3>Pay with</h3>
           <p>Card, Mobile Money, or merchant code</p>
-          <p>Merchant code: <span class="pend">to be added</span></p>
+          <p class="note">Airtel Money merchant code</p>
+          <div class="copy"><b id="merchant">4364129</b><button type="button" id="copyMerchant">Copy</button></div>
           <h3 style="margin-top:14px">Follow us</h3>
           <div class="socials">
             <a href="https://www.instagram.com/tohfa_restaurantandbar/" target="_blank" rel="noopener">Instagram</a>
@@ -437,6 +438,7 @@ function copy(id){
 }
 document.getElementById("copyPhone").onclick=()=>copy("phone");
 document.getElementById("copyMail").onclick=()=>copy("mail");
+document.getElementById("copyMerchant").onclick=()=>copy("merchant");
 </script>
 <script>
 // Offer of the day. Change the dates and text here; it switches off by itself after the end date (Kampala time).
