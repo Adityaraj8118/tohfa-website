@@ -275,7 +275,7 @@ header.scrolled .logo img{height:34px}
 
 /* scroll pop */
 .pop{animation:popIn .75s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
-@keyframes popIn{from{opacity:0;transform:translateY(28px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes popIn{from{opacity:.4;transform:translateY(28px) scale(.98)}to{opacity:1;transform:none}}
 
 @media (prefers-reduced-motion:no-preference){
   .hero-grid>div:first-child>*{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
@@ -284,7 +284,7 @@ header.scrolled .logo img{height:34px}
   .hero-grid>div:first-child>*:nth-child(4){animation-delay:.24s}
   .hero-grid>div:first-child>*:nth-child(5){animation-delay:.32s}
   .plates{animation:rise 1s .1s cubic-bezier(.2,.8,.2,1) both}
-  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes rise{from{transform:translateY(22px)}to{transform:none}}
   .hero h1 em::after{animation:draw .9s .5s cubic-bezier(.2,.8,.2,1) both}
   @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
   .ring{animation:spin 38s linear infinite}
