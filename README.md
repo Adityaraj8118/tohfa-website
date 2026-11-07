@@ -4,7 +4,7 @@ Website for Tohfa Restaurant & Bar, an Indian restaurant and bar in Bukoto, Kamp
 
 **Live site:** https://adityaraj8118.github.io/tohfa-website/
 
-**Status:** Draft. The site is live on GitHub Pages, but some content is still placeholder (see [Current limitations](#current-limitations)).
+**Status:** Client preview. I built this site for Tohfa Restaurant & Bar and maintain it. This version on GitHub Pages is the preview shared with the client; the final launch is pending, and some content is still placeholder (see [Current limitations](#current-limitations)).
 
 ## Pages
 
@@ -42,7 +42,6 @@ tohfa-website/
 ├── index.html    # Home page (markup, styles and scripts in one file)
 ├── menu.html     # Full menu page; menu data is a JSON object in the page script
 ├── .nojekyll     # Tells GitHub Pages to serve files as-is, without Jekyll
-├── backup/       # Earlier versions of both pages, kept for reference
 └── README.md
 ```
 
