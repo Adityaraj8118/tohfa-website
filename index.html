@@ -350,6 +350,27 @@ img[data-full]{cursor:zoom-in}
 .photo-note{font-size:13px;color:var(--ink-soft);margin-top:10px}
 @media (max-width:640px){.lb-nav{top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px));margin-top:0!important;width:42px;height:42px}.lb-cap h3{font-size:20px}}
 @media (prefers-reduced-motion:reduce){.lb-img,.lb-cap,.lb-bg{transition:none}}
+
+/* karaoke coming soon */
+.karaoke{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-bottom:22px;padding:22px 24px;border-radius:var(--radius);
+  background:linear-gradient(120deg,#2a1530,#3b1a1f 55%,#2a1c10);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);overflow:hidden;isolation:isolate}
+.karaoke::before{content:"";position:absolute;inset:-40%;z-index:-1;background:conic-gradient(from 0deg,transparent,rgba(245,179,53,.18),transparent 30%,rgba(224,74,66,.18),transparent 60%);}
+.k-mic{width:64px;height:64px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#1C1712;box-shadow:0 0 0 6px rgba(245,179,53,.18),0 0 30px rgba(245,179,53,.5)}
+.k-mic svg{width:32px;height:32px}
+.k-text{flex:1 1 260px;min-width:0}
+.k-text .soonbig{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:600;color:#1C1712;background:var(--gold);padding:3px 10px;border-radius:999px}
+.k-text h3{font-size:clamp(28px,4.4vw,42px);text-transform:uppercase;color:#fff;margin-top:8px;line-height:1}
+.k-text p{color:var(--night-soft);margin-top:6px}
+.k-eq{display:flex;align-items:flex-end;gap:4px;height:40px}
+.k-eq i{width:6px;height:100%;border-radius:3px;background:linear-gradient(to top,var(--gold),#E04A42);transform-origin:bottom;transform:scaleY(.5)}
+@media (prefers-reduced-motion:no-preference){
+  .karaoke::before{animation:spin 9s linear infinite}
+  .k-mic{animation:micpulse 2s ease-in-out infinite}
+  @keyframes micpulse{50%{box-shadow:0 0 0 12px rgba(245,179,53,.08),0 0 44px rgba(245,179,53,.7);transform:rotate(-8deg)}}
+  .k-eq i{animation:eq 1s ease-in-out infinite}
+  .k-eq i:nth-child(2n){animation-delay:.25s}.k-eq i:nth-child(3n){animation-delay:.5s;animation-duration:.8s}.k-eq i:nth-child(5n){animation-delay:.15s;animation-duration:1.2s}
+}
+@media (max-width:520px){.k-eq{display:none}}
 </style>
 </head>
 <body>
@@ -459,6 +480,12 @@ img[data-full]{cursor:zoom-in}
         <div><span class="brush">After dark</span><h2 id="pt-h">Bar, parties and events</h2></div>
         <p>Birthdays, introductions, weddings, graduations, and baby showers. Tell us the date and how many guests.</p>
       </div>
+      <div class="karaoke">
+        <div class="k-mic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg></div>
+        <div class="k-text"><span class="soonbig">Coming soon</span><h3>Karaoke nights at Tohfa</h3><p>Sing your favourite songs with friends, with food and drinks from the bar. Ask us on WhatsApp to hear first when it starts.</p></div>
+        <div class="k-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <a class="btn btn-wa" href="https://wa.me/256752462814?text=Hello%20Tohfa%2C%20please%20tell%20me%20when%20karaoke%20starts." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Tell me when it starts</a>
+      </div>
       <div class="n-grid">
         <div class="n-card">
           <h3>Party halls</h3>
@@ -475,7 +502,7 @@ img[data-full]{cursor:zoom-in}
         <div class="n-card">
           <h3>The bar</h3>
           <p class="soft">Beer, cider, juices and lassi at the bar counter, with starters from the kitchen.</p>
-          <span class="soon"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Karaoke coming soon</span>
+          <span class="soon"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Karaoke: coming soon</span>
           <a class="btn btn-ghost" href="menu.html#drinks">Drinks menu</a>
         </div>
       </div>
