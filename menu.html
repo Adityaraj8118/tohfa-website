@@ -150,7 +150,7 @@ nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
   linear-gradient(180deg,rgba(11,8,6,.7) 0%,rgba(11,8,6,.1) 28%,rgba(11,8,6,.35) 58%,rgba(11,8,6,.96) 100%),
   linear-gradient(90deg,rgba(11,8,6,.82) 0%,rgba(11,8,6,.35) 52%,rgba(11,8,6,0) 100%)}
 #embers{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
-.hero-in{position:relative;padding-top:140px;padding-bottom:clamp(36px,6vh,70px);display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:end;will-change:transform}
+.hero-in{position:relative;padding-top:140px;padding-bottom:max(100px,8vh);display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:end;will-change:transform}
 .eyes{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin-bottom:28px}
 .fx .eyes,.fx .lede,.fx .cta,.fx .cuisines,.fx .now{opacity:0;transform:translateY(24px);animation:up 1s var(--ease) forwards}
 .fx .eyes{animation-delay:calc(var(--ld) + .1s)}
@@ -253,11 +253,13 @@ nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
 .hs-bar{display:none}
 /* pinned mode, turned on by script on wide screens */
 .pinned .specials{padding-block:0}
-.pinned .hs-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+.pinned .hs-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;padding-top:40px}
 .pinned .hs-track{display:flex;align-items:center;gap:22px;padding-inline:max(40px,calc((100vw - 1260px)/2 + 20px));will-change:transform}
 .pinned .hs-intro{flex:none;width:420px;margin:0 40px 0 0;padding:0}
 .pinned .sp-grid{overflow:visible;padding:0;gap:22px}
-.pinned .sp{width:clamp(300px,25vw,380px)}
+.pinned .sp{width:clamp(290px,24vw,370px)}
+.pinned .sp-img{aspect-ratio:auto;height:clamp(180px,calc(100vh - 430px),460px)}
+.pinned .sp .desc{min-height:0}
 .pinned .hs-end{width:300px;align-self:stretch}
 .pinned .photo-note{position:absolute;left:0;right:0;bottom:28px;text-align:center;max-width:none}
 .pinned .hs-bar{display:block;position:absolute;left:50%;bottom:64px;width:200px;margin-left:-100px;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
@@ -324,7 +326,8 @@ nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
 .bulb::before{content:"";position:absolute;left:3px;top:-6px;width:6px;height:6px;background:#3A2A1E;border-radius:2px}
 @keyframes glow{0%,100%{opacity:1}50%{opacity:.55}}
 @keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-.bokeh i{position:absolute;border-radius:50%;filter:blur(30px);opacity:.35;pointer-events:none;animation:float 14s ease-in-out infinite;transform:translate3d(0,var(--py,0px),0)}
+.night>.wrap{position:relative;z-index:1}
+.bokeh i{position:absolute;border-radius:50%;filter:blur(40px);opacity:.2;pointer-events:none;animation:float 14s ease-in-out infinite;transform:translate3d(0,var(--py,0px),0)}
 @keyframes float{50%{translate:30px -40px}}
 .karaoke{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center;padding:clamp(28px,5vw,60px);border-radius:32px;margin-bottom:28px;
   background:linear-gradient(140deg,rgba(255,61,127,.08),rgba(235,165,58,.05) 60%,transparent),#120A09;border:1px solid rgba(255,90,140,.22);overflow:hidden}
@@ -355,7 +358,8 @@ nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
 @keyframes spinA{to{--a:360deg}}
 .n-card h3{font-size:34px}
 .big{display:flex;align-items:baseline;gap:10px}
-.big b{font-family:var(--display);font-weight:300;font-size:clamp(56px,6vw,80px);line-height:1;color:#EBA53A;font-variant-numeric:tabular-nums}
+.big{flex-wrap:wrap}
+.big b{white-space:nowrap;font-family:var(--display);font-weight:300;font-size:clamp(50px,5.2vw,74px);line-height:1;color:#EBA53A;font-variant-numeric:tabular-nums}
 .big span{color:#C9B8A2;font-weight:600}
 .n-card .soft{color:#C9B8A2;flex:1}
 .n-card .btn{margin-top:6px}
@@ -374,7 +378,7 @@ nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
 .tiffin p,.about p{color:var(--ink-soft)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
-.tbox{position:absolute;right:clamp(16px,4vw,44px);top:clamp(20px,4vw,40px);width:86px;color:var(--chilli);opacity:.9}
+.tbox{position:absolute;right:clamp(20px,4vw,44px);bottom:clamp(24px,4vw,44px);width:74px;color:var(--chilli);opacity:.9}
 .tbox .stm{stroke-dasharray:4 6;animation:steam 2.6s linear infinite}
 .tbox .stm:nth-of-type(2){animation-delay:-.9s}.tbox .stm:nth-of-type(3){animation-delay:-1.7s}
 @keyframes steam{from{stroke-dashoffset:20;opacity:0}40%{opacity:.9}to{stroke-dashoffset:0;opacity:0}}
@@ -406,7 +410,7 @@ nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
 .socials a{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:9px 14px;border-radius:999px;border:1px solid var(--line);transition:border-color .3s,color .3s}
 .socials a:hover{border-color:var(--gold);color:var(--gold)}
 .call{display:inline-block;margin-top:8px;font-size:14px;font-weight:700;color:var(--gold);text-decoration:none}
-@media (max-width:920px){.v-grid{grid-template-columns:1fr}.map{min-height:320px}}
+@media (max-width:1100px){.v-grid{grid-template-columns:1fr}.map{min-height:340px}}
 @media (max-width:480px){.v-two{grid-template-columns:1fr}.copy b,.copy span.v{font-size:21px}}
 
 /* ===== footer ===== */
@@ -846,6 +850,7 @@ const OFFER={title:"Happy Dhanteras",text:"on everything: food, drinks and bever
     ml.addEventListener("pointermove",e=>{x=e.clientX+24;y=e.clientY-160;const li=e.target.closest("li");
       const id=li&&li.dataset.img; if(id){const src=U(id,520,640); if(im.dataset.s!==src){im.src=src;im.dataset.s=src} if(!active){cx=x;cy=y} active=true; hi.classList.add("on")} else {active=false;hi.classList.remove("on")}});
     ml.addEventListener("pointerleave",()=>{active=false;hi.classList.remove("on")});
+    addEventListener("scroll",()=>{if(active){active=false;hi.classList.remove("on")}},{passive:true});
     (function loop(){cx+=(x-cx)*.14;cy+=(y-cy)*.14;const r=Math.max(-10,Math.min(10,(cx-lx)*.4));lx=cx;
       hi.style.setProperty("--hx",cx+"px");hi.style.setProperty("--hy",cy+"px");hi.style.setProperty("--hr",r+"deg");requestAnimationFrame(loop)})();
   }
