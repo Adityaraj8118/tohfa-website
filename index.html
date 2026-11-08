@@ -21,7 +21,7 @@ try{if(sessionStorage.getItem("tohfa-seen"))R.classList.add("noload");sessionSto
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"Tohfa Restaurant & Bar",
 "address":{"@type":"PostalAddress","streetAddress":"43A Bukoto–Kyebando Road, along Nakitende Close","addressLocality":"Kampala","addressCountry":"UG"},
-"telephone":"+256732383624","email":"tohfarestaurantandbar@gmail.com",
+"telephone":["+256732383624","+256752462814"],"email":"tohfarestaurantandbar@gmail.com",
 "servesCuisine":["Indian","Indo-Chinese","Ugandan","Café"],"priceRange":"UGX",
 "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"23:59"}],
 "hasMenu":"menu.html","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Car parking","value":true},{"@type":"LocationFeatureSpecification","name":"Pets allowed","value":true},{"@type":"LocationFeatureSpecification","name":"Kids play area","value":true},{"@type":"LocationFeatureSpecification","name":"Wedding venue","value":true},{"@type":"LocationFeatureSpecification","name":"Music","value":true}],"acceptsReservations":"True","sameAs":["https://www.instagram.com/tohfa_restaurantandbar/","https://www.tiktok.com/@tohfa_restaurant"]}
@@ -763,8 +763,12 @@ img[data-full]{cursor:zoom-in}
             </div>
             <div class="v-card rv" style="--d:3">
               <h3>Call or WhatsApp</h3>
+              <p class="note">Orders</p>
               <div class="copy"><b id="phone">+256 732 383624</b><button type="button" id="copyPhone">Copy</button></div>
               <a href="tel:+256732383624" class="call">Tap to call →</a>
+              <p class="note" style="margin-top:14px">Also reach us on</p>
+              <div class="copy"><b id="phone2">+256 752 462814</b><button type="button" id="copyPhone2">Copy</button></div>
+              <a href="tel:+256752462814" class="call">Tap to call →</a>
             </div>
           </div>
           <div class="v-two">
@@ -865,6 +869,7 @@ function copy(id){
   try{navigator.clipboard.writeText(t).then(done,()=>{getSelection().selectAllChildren(el)})}catch(e){getSelection().selectAllChildren(el)}
 }
 document.getElementById("copyPhone").onclick=()=>copy("phone");
+document.getElementById("copyPhone2").onclick=()=>copy("phone2");
 document.getElementById("copyMail").onclick=()=>copy("mail");
 document.getElementById("copyMerchant").onclick=()=>copy("merchant");
 </script>
